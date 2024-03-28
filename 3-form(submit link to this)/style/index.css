@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  height: fit-content;
+  cursor: default;
+}
+
+html, body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  background-image: url("https://source.unsplash.com/G8rRItjrwkA");
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 1000px;
+  height: 650px;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+  justify-items: center;
+}
+
+.title {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button {
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+  margin: 0 50px;
+  font-size: 25px;
+}
+nav button:hover {
+  color: lightgray;
+}
+nav .register {
+  border: 2px white solid;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+nav .register:hover {
+  color: lightgray;
+}
+nav .register:hover::before {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+nav .register::before {
+  content: "";
+  position: absolute;
+  background: white;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+.statement {
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+form .input-field {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-items: center;
+  border-radius: 20px;
+  padding-left: 10px;
+  background: white;
+}
+form .input-field i {
+  margin: auto;
+  color: black;
+  margin-right: 10px;
+  font-size: 30px;
+}
+form .input-field input {
+  position: relative;
+  top: 14%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 600px;
+  height: 70px;
+}
+form .input-field input::placeholder {
+  font-size: 30px;
+}
+form .input-field button {
+  border-radius: 20px;
+  border: none;
+  background: rgb(240, 63, 90);
+  width: 250px;
+  height: 70px;
+  font-size: 30px;
+}
+form .input-field button:hover {
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 rgb(240, 63, 90);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
